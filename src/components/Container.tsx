@@ -33,6 +33,8 @@ const Container: React.FC<Props> = ({ children, scrollView = false, flatList = f
           </ScrollView>}
         </>
       )}
+
+      {flatList && children}
     </SafeAreaView>
   )
 }
