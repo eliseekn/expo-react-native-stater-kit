@@ -1,3 +1,5 @@
+import LoginScreen from './Auth/LoginScreen'
+import RegisterScreen from './Auth/RegisterScreen'
 import HomeScreen from './HomeScreen'
 
-export {HomeScreen}
+export { LoginScreen, RegisterScreen, HomeScreen }
