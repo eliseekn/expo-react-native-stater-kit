@@ -15,9 +15,11 @@ cd project-name
 
 ```bash
 yarn
+yarn start
 ```
 or
 
 ```bash
 npm run install
+npm run start
 ```
