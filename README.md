@@ -1,5 +1,5 @@
 # Starter Kit for React Native with Expo
-A starter kit for rapid mobile application development with React Native and Expo.
+React Native starter kit with Expo using React Native Paper UI Components.
 
 ## Features
 - Login screen
