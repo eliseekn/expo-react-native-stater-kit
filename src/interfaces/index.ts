@@ -2,6 +2,7 @@ export type NavigationStack = {
   LoginScreen: undefined
   RegisterScreen: undefined
   AuthStack: undefined
+  HomeStack: undefined
   HomeScreen: undefined
 }
 
@@ -13,6 +14,20 @@ export type UserType = {
   updated_at: string
 }
 
-export type AuthType = UserType & {
+export type AuthType = {
+  user: UserType
   token?: string
+}
+
+export type FetchOptions = {
+  method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+  body?: string | FormData
+  headers?: Record<string, string>
+}
+
+export type FetchResponse<T> = {
+  data: T | null
+  loading: boolean
+  error: string
+  status: number | null
 }

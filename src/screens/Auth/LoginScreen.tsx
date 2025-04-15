@@ -20,12 +20,13 @@ const LoginScreen: React.FC = () => {
     setAuth({
       user: {
         id: 1,
-        name: 'John Doe',
-        email: 'john@doe.com',
-      }
+        name: email,
+        email: password,
+      },
+      token: Date.now()
     })
 
-    navigation.navigate('HomeScreen')
+    navigation.navigate('HomeStack')
   }
 
   return (
@@ -34,56 +35,51 @@ const LoginScreen: React.FC = () => {
         Log in to your account
       </Text>
 
-      <Text style={{ marginBottom: 10 }}>
-        Email
-      </Text>
-
       <TextInput
         mode='outlined'
+        label='Email'
         value={email}
         onChangeText={setEmail}
-        style={{ backgroundColor: 'white', marginBottom: 10 }}
+        style={{ backgroundColor: 'white', marginBottom: 15 }}
         outlineStyle={{ borderRadius: 12 }}
-        right={<TextInput.Icon icon='email' />}
+        left={<TextInput.Icon icon='email' />}
         autoCapitalize='none'
       />
 
-      <Text style={{ marginBottom: 10 }}>
-        Password
-      </Text>
-
       <TextInput
         mode='outlined'
+        label='Password'
         value={password}
         onChangeText={setPassword}
         style={{ backgroundColor: 'white' }}
         outlineStyle={{ borderRadius: 12 }}
         right={<TextInput.Icon icon={showPassword ? 'eye-off' : 'eye'} onPress={() => setShowPassword(!showPassword)} />}
+        left={<TextInput.Icon icon='lock' />}
         secureTextEntry={!showPassword}
         autoCapitalize='none'
       />
 
       <Button
         mode="contained"
-        compact
-        labelStyle={{ color: 'white' }}
         contentStyle={{ height: 50 }}
-        style={{ backgroundColor: 'darkblue', borderRadius: 12, marginTop: 20 }}
+        style={{ borderRadius: 12, marginTop: 20 }}
+        buttonColor='darkblue'
+        textColor='white'
         onPress={handleLogin}
       >
         Log in
       </Button>
 
-      <Text style={{ textAlign: 'center', marginVertical: 10 }}>
+      <Text style={{ textAlign: 'center', marginVertical: 5 }}>
         OR
       </Text>
 
       <Button
         mode="contained"
-        compact
-        labelStyle={{ color: 'white' }}
         contentStyle={{ height: 50 }}
-        style={{ backgroundColor: 'darkred', borderRadius: 12 }}
+        style={{ borderRadius: 12 }}
+        buttonColor='darkred'
+        textColor='white'
         onPress={() => navigation.navigate('RegisterScreen')}
       >
         Register

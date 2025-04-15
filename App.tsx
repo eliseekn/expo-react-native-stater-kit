@@ -4,9 +4,8 @@ import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { NavigationStack } from './src/interfaces'
-import { AuthStack } from './src/navigation'
+import { AuthStack, HomeStack } from './src/navigation'
 import { useAuthStore } from './src/stores'
-import {HomeScreen} from "./src/screens"
 
 const theme = {
   ...DefaultTheme,
@@ -25,7 +24,7 @@ const App: React.FC = () => {
       return 'AuthStack'
     }
 
-    return 'HomeScreen'
+    return 'HomeStack'
   }
 
   return (
@@ -33,7 +32,7 @@ const App: React.FC = () => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName={getInitialRouteName()}>
           <Stack.Screen name="AuthStack" component={AuthStack} options={{ headerShown: false }} />
-          <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

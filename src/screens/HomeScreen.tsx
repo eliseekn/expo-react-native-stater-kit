@@ -12,9 +12,9 @@ const HomeScreen: React.FC = () => {
   const { auth, removeAuth } = useAuthStore()
   const navigation: NavigationProps = useNavigation<NavigationProps>()
 
-  const handleGoBack = () => {
+  const handleLogout = () => {
     removeAuth()
-    navigation.goBack()
+    navigation.navigate('AuthStack')
   }
 
   return (
@@ -33,7 +33,7 @@ const HomeScreen: React.FC = () => {
         labelStyle={{ color: 'white' }}
         contentStyle={{ height: 50 }}
         style={{ backgroundColor: 'darkred', borderRadius: 12 }}
-        onPress={handleGoBack}
+        onPress={handleLogout}
       >
         Log out
       </Button>
