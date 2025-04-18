@@ -2,11 +2,8 @@ import React from "react"
 import { Button, Text } from "react-native-paper"
 import { useAuthStore } from "../stores"
 import Container from "../components/Container"
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { NavigationStack } from "../interfaces";
 import { useNavigation } from "@react-navigation/native";
-
-type NavigationProps = NativeStackNavigationProp<NavigationStack>
+import { NavigationProps } from "../interfaces";
 
 const HomeScreen: React.FC = () => {
   const { auth, removeAuth } = useAuthStore()

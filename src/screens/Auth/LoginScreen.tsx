@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 import { Button, Text, TextInput } from 'react-native-paper'
-import { NavigationStack } from '../../interfaces'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { useNavigation } from '@react-navigation/native'
 import { useAuthStore } from '../../stores'
 import Container from '../../components/Container'
-
-type NavigationProps = NativeStackNavigationProp<NavigationStack>
+import { NavigationProps } from '../../interfaces'
 
 const LoginScreen: React.FC = () => {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const { setAuth } = useAuthStore()
-
   const navigation: NavigationProps = useNavigation<NavigationProps>()
 
   const handleLogin = async (): Promise<void> => {

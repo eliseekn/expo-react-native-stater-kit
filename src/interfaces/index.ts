@@ -1,3 +1,5 @@
+import { NativeStackNavigationProp } from "@react-navigation/native-stack"
+
 export type NavigationStack = {
   LoginScreen: undefined
   RegisterScreen: undefined
@@ -31,3 +33,5 @@ export type FetchResponse<T> = {
   error: string
   status: number | null
 }
+
+export type NavigationProps = NativeStackNavigationProp<NavigationStack>

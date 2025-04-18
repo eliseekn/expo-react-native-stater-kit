@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Text, TextInput } from 'react-native-paper'
+import { Button, TextInput } from 'react-native-paper'
 import Container from '../../components/Container'
 
 const RegisterScreen: React.FC = () => {
