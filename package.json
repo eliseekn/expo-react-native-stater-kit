@@ -1,7 +1,7 @@
 {
-  "name": "pharma-delivery",
+  "name": "expo-react-native-starter-kit",
   "version": "1.0.0",
-  "description": "Application mobile de livraison à domicile de médicaments pharmaceutiques.",
+  "description": "React Native starter kit with Expo using React Native Paper UI Components.",
   "author": {
     "name": "N'Guessan Kouadio Elisée",
     "email": "eliseekn@gmail.com",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eliseekn/pharma-delivery-mobile"
+    "url": "https://github.com/eliseekn/expo-react-native-starter-kit"
   },
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {

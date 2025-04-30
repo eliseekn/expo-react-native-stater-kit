@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react"
-import { SafeAreaView } from "react-native-safe-area-context"
-import { Platform, ScrollView, ViewStyle } from "react-native"
+import React, { ReactNode } from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Platform, ScrollView, ViewStyle } from 'react-native'
 
 type Props = {
   children: ReactNode | ReactNode[]

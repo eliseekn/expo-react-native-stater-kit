@@ -1,9 +1,9 @@
-import React from "react"
-import { Button, Text } from "react-native-paper"
-import { useAuthStore } from "../stores"
-import Container from "../components/Container"
-import { useNavigation } from "@react-navigation/native";
-import { NavigationProps } from "../interfaces";
+import React from 'react'
+import { Button, Text } from 'react-native-paper'
+import { useAuthStore } from '../stores'
+import Container from '../components/Container'
+import { useNavigation } from '@react-navigation/native'
+import { NavigationProps } from '../interfaces'
 
 const HomeScreen: React.FC = () => {
   const { auth, removeAuth } = useAuthStore()
@@ -25,7 +25,7 @@ const HomeScreen: React.FC = () => {
       </Text>
 
       <Button
-        mode="contained"
+        mode='contained'
         compact
         labelStyle={{ color: 'white' }}
         contentStyle={{ height: 50 }}

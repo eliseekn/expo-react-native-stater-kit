@@ -31,8 +31,8 @@ const App: React.FC = () => {
     <PaperProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName={getInitialRouteName()}>
-          <Stack.Screen name="AuthStack" component={AuthStack} options={{ headerShown: false }} />
-          <Stack.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
+          <Stack.Screen name='AuthStack' component={AuthStack} options={{ headerShown: false }} />
+          <Stack.Screen name='HomeStack' component={HomeStack} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

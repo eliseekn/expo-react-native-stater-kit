@@ -1,4 +1,4 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack"
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 export type NavigationStack = {
   LoginScreen: undefined
@@ -7,6 +7,8 @@ export type NavigationStack = {
   HomeStack: undefined
   HomeScreen: undefined
 }
+
+export type NavigationProps = NativeStackNavigationProp<NavigationStack>
 
 export type UserType = {
   id: number
@@ -34,4 +36,16 @@ export type FetchResponse<T> = {
   status: number | null
 }
 
-export type NavigationProps = NativeStackNavigationProp<NavigationStack>
+export type ResponseType<T> = {
+  data: T[]
+  meta?: {
+    current_page: number
+    last_page: number
+    total: number
+    from?: number
+    to?: number
+    links: any[]
+    path: string
+    per_page: number
+  }
+}

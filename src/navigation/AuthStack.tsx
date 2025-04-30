@@ -8,10 +8,10 @@ const Stack = createNativeStackNavigator<NavigationStack>()
 
 const AuthStack: React.FC = () => {
   return (
-    <Stack.Navigator initialRouteName="LoginScreen">
-      <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerTitle: 'Register' }} />
-      <Stack.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
+    <Stack.Navigator initialRouteName='LoginScreen'>
+      <Stack.Screen name='LoginScreen' component={LoginScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='RegisterScreen' component={RegisterScreen} options={{ headerTitle: 'Register' }} />
+      <Stack.Screen name='HomeStack' component={HomeStack} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
